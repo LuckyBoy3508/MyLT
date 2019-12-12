@@ -1,0 +1,745 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\MyLT.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#include ""l.chs\\afxprint.rc""        // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\MyLT.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "新建(&N)...\tCtrl+N",         IDM_FILE_NEW
+        MENUITEM "打开(&O)...\tCtrl+O",         IDM_FILE_OPEN
+        MENUITEM "保存(&S)...\tCtrl+S",         IDM_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                    IDM_FILE_EXIT
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        MENUITEM "主视图  (&M)",                IDM_VIEW_MAIN
+        MENUITEM "分析视图(&A)",                IDM_VIEW_ANALYSE
+        MENUITEM "统计视图(&S)",                IDM_VIEW_STAT
+    END
+    POPUP "数据(&D)"
+    BEGIN
+        MENUITEM "数据管理(&M)...",             IDM_DATA_MANAGER
+        MENUITEM "统计区间(&P)...",             IDM_DATA_SELECT
+        MENUITEM SEPARATOR
+        MENUITEM "数据转换(&T)...",             IDM_DATA_TRANSDATA
+    END
+    POPUP "选项(&O)"
+    BEGIN
+        MENUITEM "系统设置(&S)...",             IDM_OPT_SYSSETUP
+    END
+    POPUP "网络(&N)"
+    BEGIN
+        MENUITEM "数据下载(&D)...",             IDM_NET_DOWNLOAD
+        MENUITEM "软件更新(&U)",                IDM_NET_UPDATE
+        MENUITEM "软件注册(&R)",                IDM_NET_REGISTER
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "使用帮助(&C)",                IDM_HLP_CONTENT
+        MENUITEM "关于(&A)...",                 IDM_HLP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "N",            IDM_FILE_NEW,           VIRTKEY, CONTROL, NOINVERT
+    "O",            IDM_FILE_OPEN,          VIRTKEY, CONTROL, NOINVERT
+    "S",            IDM_FILE_SAVE,          VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DLG_ABOUT DIALOGEX 0, 0, 260, 201
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于..."
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,203,5,50,14,WS_GROUP
+    ICON            IDR_MAINFRAME,IDC_STATIC,5,2,20,20
+    LTEXT           "",IDC_STATIC_CREDIT,7,25,246,169,0,WS_EX_STATICEDGE
+    LTEXT           "http://dfliu.go.nease.net",IDC_STA_HTTPHOST,36,6,161,13,
+                    SS_NOTIFY | SS_CENTERIMAGE
+END
+
+IDD_DLG_STATVIEW DIALOGEX 0, 0, 680, 420
+STYLE WS_CHILD
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_A_CB_STATFROM,91,25,50,117,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_A_CB_STATHISRET,128,90,156,196,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_A_CB_AVERET,128,106,156,106,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_B_CB_HF,99,165,40,132,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_B_CB_HT,99,180,40,133,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_B_CB_MF,163,165,40,111,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_B_CB_MT,163,180,40,132,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_B_CB_CF,227,165,40,121,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_B_CB_CT,227,180,40,107,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_B_CB_HMIN,79,377,31,132,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_B_CB_HMAX,112,377,31,132,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_B_LST_FILTER,159,226,121,160,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_B_CB_FILTERF,170,391,41,132,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_B_CB_FILTERT,235,391,41,132,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "开始统计",IDC_C_BTN_GO,337,330,45,36
+    PUSHBUTTON      "停止操作",IDC_C_BTN_STOPALL,421,330,45,36
+    COMBOBOX        IDC_C_CB_PERIODNUM,552,334,48,227,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "复式",IDC_C_CK_MULTISEL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,620,335,32,10
+    PUSHBUTTON      "开始生成自选号",IDC_C_BTN_NEXTPERIOD,527,352,74,14
+    PUSHBUTTON      "保存选号",IDC_C_BTN_SAVENEXT,607,352,45,14
+    PUSHBUTTON      "清除信息",IDC_C_BTN_CLEAR,537,392,45,14
+    PUSHBUTTON      "保存信息",IDC_C_BTN_SAVE,607,392,45,14
+    LISTBOX         IDC_C_LST_MSG,309,16,354,277,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        " 概率统计结果 ",IDC_STATIC,5,3,287,121
+    GROUPBOX        " 选号条件设置 ",IDC_STATIC,5,130,287,284
+    GROUPBOX        " 缩水 ",IDC_STATIC,153,199,133,210
+    GROUPBOX        " 信息 ",IDC_STATIC,299,3,372,297
+    LTEXT           "热  号:",IDC_STATIC,35,45,29,8
+    LTEXT           "温  号:",IDC_STATIC,35,61,29,8
+    LTEXT           "冷  号:",IDC_STATIC,35,77,29,8
+    LTEXT           "预测下一期热温冷号出现个数:",IDC_STATIC,15,108,109,8
+    LTEXT           "热  号",IDC_STATIC,107,153,25,8
+    LTEXT           "01 02 03 04 05 06 07 08",IDC_A_STC_HOT,69,43,215,11,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    LTEXT           "01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19 20 21 22",
+                    IDC_A_STC_MIDDLE,69,56,215,18,0,WS_EX_STATICEDGE
+    LTEXT           "01 02 03 04 05 06 07 08",IDC_A_STC_CODE,69,75,215,11,
+                    SS_CENTERIMAGE,WS_EX_STATICEDGE
+    LTEXT           "温  号",IDC_STATIC,170,153,25,8
+    LTEXT           "横向空区数范围:",IDC_STATIC,15,351,61,8
+    LTEXT           "横向区最大出数:",IDC_STATIC,15,381,61,8
+    LTEXT           "期号:",IDC_STATIC,68,29,21,8
+    LTEXT           "各期热温冷号出现个数:",IDC_STATIC,15,94,85,8
+    CONTROL         "Progress1",IDC_C_PRO_PROCESS,"msctls_progress32",
+                    WS_BORDER,337,393,112,13
+    LTEXT           "",IDC_C_STC_MINIMSG,337,380,112,11,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    LTEXT           "选号",IDC_STATIC,501,323,17,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,85,20,
+                    200,1
+    LTEXT           "各期热温冷号分布",IDC_STATIC,15,17,65,8
+    LTEXT           "选号",IDC_STATIC,15,144,17,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,36,147,
+                    248,1
+    LTEXT           "最少个数:",IDC_STATIC,35,168,37,8
+    LTEXT           "最多个数:",IDC_STATIC,35,182,37,8
+    LTEXT           "冷  号",IDC_STATIC,233,153,25,8
+    GROUPBOX        " 操作 ",IDC_STATIC,299,309,372,105
+    LTEXT           "统计",IDC_STATIC,309,323,17,8
+    LTEXT           "进度",IDC_STATIC,309,369,17,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,331,326,
+                    137,1
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,523,326,
+                    137,1
+    LTEXT           "组数:",IDC_STATIC,526,336,21,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,331,373,
+                    137,1
+    LTEXT           "从",IDC_STATIC,160,393,9,8
+    LTEXT           "到",IDC_STATIC,225,393,9,8
+    GROUPBOX        " 缩号 ",IDC_STATIC,9,199,140,210
+    LTEXT           "必有号码和必无号码设置:",IDC_STATIC,16,212,93,8
+    LTEXT           "缩水选项:",IDC_STATIC,159,214,37,8
+    LTEXT           "信息",IDC_STATIC,501,369,17,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,523,373,
+                    137,1
+    LTEXT           "Static",IDC_B_STC_NOFILTER,15,225,128,120,SS_NOTIFY,
+                    WS_EX_STATICEDGE
+    LTEXT           "纵向空区数范围:",IDC_STATIC,15,366,61,8
+    COMBOBOX        IDC_B_CB_HZMIN,79,349,31,132,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_B_CB_HZMAX,112,349,31,132,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_B_CB_VZMIN,79,363,31,132,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_B_CB_VZMAX,112,363,31,132,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_B_CB_VMIN,79,391,31,132,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_B_CB_VMAX,112,391,31,132,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "横向区最大出数:",IDC_STATIC,15,395,61,8
+END
+
+IDD_DLG_NEWFILE DIALOG DISCARDABLE  0, 0, 280, 115
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "新建历史数据文件"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDT_FILENAME,68,14,78,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CB_PROVINCE,226,16,48,173,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDT_DESP,68,34,206,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CB_FROM,68,70,48,141,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_TO,150,70,48,144,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "有特殊号",IDC_CK_HAVESPEC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,226,72,48,10
+    DEFPUSHBUTTON   "确定",IDOK,151,96,50,14
+    PUSHBUTTON      "取消",IDCANCEL,224,96,50,14
+    LTEXT           "文件信息",IDC_STATIC,6,5,33,8
+    LTEXT           "数据信息",IDC_STATIC,6,61,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,42,8,231,
+                    1
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,6,89,267,
+                    1
+    LTEXT           "名称:",IDC_STATIC,42,17,21,8
+    LTEXT           "从:",IDC_STATIC,50,72,13,8
+    LTEXT           "选择:",IDC_STATIC,127,73,21,8
+    LTEXT           "描述:",IDC_STATIC,42,37,21,8
+    LTEXT           "省份:",IDC_STATIC,199,17,21,8
+    LTEXT           "如:上海幸运35",IDC_STATIC,68,51,53,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,42,64,
+                    231,1
+END
+
+IDD_DLG_DATAMANAGER DIALOG DISCARDABLE  0, 0, 332, 95
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "数据"
+FONT 9, "宋体"
+BEGIN
+    EDITTEXT        IDC_EDT_PERIOD,81,15,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_DATE,170,15,67,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDT_DEVOTE,284,15,40,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CB_NO_1,77,50,25,126,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO_2,106,50,25,129,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO_3,135,50,25,128,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO_4,164,50,25,149,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO_5,193,50,25,130,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO_6,222,50,25,124,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO_7,251,50,25,130,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO_8,288,49,25,126,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "增加",IDC_BTN_ADD,41,74,50,14
+    PUSHBUTTON      "插入",IDC_BTN_INSERT,95,74,50,14
+    PUSHBUTTON      "修改",IDC_BTN_MODIFY,149,74,50,14
+    PUSHBUTTON      "删除",IDC_BTN_DEL,203,74,50,14
+    PUSHBUTTON      "退出",IDC_BTN_EXIT,275,74,50,14
+    LTEXT           "数据信息",IDC_STATIC,6,6,33,8
+    LTEXT           "操    作",IDC_STATIC,6,64,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,42,9,281,
+                    1
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,42,68,
+                    281,1
+    LTEXT           "中奖期数:",IDC_STATIC,42,18,37,8
+    LTEXT           "中奖日期:",IDC_STATIC,126,18,37,8
+    LTEXT           "总投注额:",IDC_STATIC,246,18,37,8
+    LTEXT           "中奖号码:",IDC_STATIC,41,38,37,8
+    LTEXT           "号码1",IDC_STA_NO1,81,38,21,8
+    LTEXT           "号码2",IDC_STA_NO2,109,38,21,8
+    LTEXT           "号码3",IDC_STA_NO3,137,38,21,8
+    LTEXT           "号码4",IDC_STA_NO4,165,38,21,8
+    LTEXT           "号码5",IDC_STA_NO5,193,38,21,8
+    LTEXT           "号码6",IDC_STA_NO6,221,38,21,8
+    LTEXT           "号码7",IDC_STA_NO7,249,38,21,8
+    LTEXT           "特别号",IDC_STA_NO8,289,38,25,8
+END
+
+IDD_DLG_SELPERIOD DIALOG DISCARDABLE  0, 0, 205, 73
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选择统计区间"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "允许选择",IDC_CK_ALLOWSEL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,41,14,48,10
+    COMBOBOX        IDC_CB_BEGINPERIOD,70,28,48,164,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CB_ENDPERIOD,146,28,48,178,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确定",IDOK,80,54,50,14
+    DEFPUSHBUTTON   "取消",IDCANCEL,142,54,50,14
+    LTEXT           "区间选择",IDC_STATIC,5,6,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,41,9,153,
+                    1
+    LTEXT           "从:",IDC_STATIC,55,30,13,8
+    LTEXT           "到:",IDC_STATIC,130,30,13,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,5,46,189,
+                    1
+END
+
+IDD_DLG_DATATRANS DIALOG DISCARDABLE  0, 0, 399, 147
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "从文本文件转换数据"
+FONT 9, "宋体"
+BEGIN
+    PUSHBUTTON      "浏览(&B)...",IDC_BTN_BROSER,339,11,50,14
+    EDITTEXT        IDC_EDT_FILENAME2,128,27,90,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CB_PROVINCE,274,28,48,173,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDT_DESP,63,43,259,14,ES_AUTOHSCROLL
+    COMBOBOX        IDC_CB_FROM,63,68,27,141,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_TO,119,68,27,144,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "有特别号",IDC_CK_HAVESPEC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,154,70,48,10
+    COMBOBOX        IDC_CB_SEPA,244,68,89,141,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    CONTROL         "升序排列",IDC_CK_UPORDER,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,341,70,48,10
+    COMBOBOX        IDC_CB_PERIOD,63,101,27,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CB_DATE,91,101,27,141,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_DEVOTE,119,101,27,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CB_NO1,154,101,27,141,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO2,184,101,27,141,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO3,214,101,27,141,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO4,244,101,27,141,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO5,274,101,27,141,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO6,304,101,27,141,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO7,334,101,27,141,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_CB_NO8,362,101,27,141,CBS_DROPDOWNLIST | WS_VSCROLL | 
+                    WS_TABSTOP
+    PUSHBUTTON      "开始转换",IDC_BTN_START,42,128,50,14
+    PUSHBUTTON      "退出",IDCANCEL,341,128,50,14
+    LTEXT           "文件信息",IDC_STATIC,6,5,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,42,8,348,
+                    1
+    LTEXT           "待转换的文本文件名称:",IDC_STATIC,42,15,85,8
+    EDITTEXT        IDC_EDT_FILENAME,128,12,194,14,ES_AUTOHSCROLL | 
+                    ES_READONLY
+    LTEXT           "数据信息",IDC_STATIC,6,58,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,42,62,
+                    348,1
+    LTEXT           "描述:",IDC_STATIC,42,46,20,8
+    LTEXT           "位置:",IDC_STATIC,42,89,21,8
+    LTEXT           "号码1",IDC_STA_NO1,155,89,21,8
+    LTEXT           "号码2",IDC_STA_NO2,185,89,21,8
+    LTEXT           "号码3",IDC_STA_NO3,215,89,21,8
+    LTEXT           "号码4",IDC_STA_NO4,245,89,21,8
+    LTEXT           "号码5",IDC_STA_NO5,275,89,21,8
+    LTEXT           "号码6",IDC_STA_NO6,305,89,21,8
+    LTEXT           "号码7",IDC_STA_NO7,335,89,21,8
+    LTEXT           "特别号",IDC_STA_NO8,364,89,25,8
+    LTEXT           "从:",IDC_STATIC,50,71,13,8
+    LTEXT           "选择:",IDC_STATIC,96,71,21,8
+    LTEXT           "期数",IDC_STA_PERIOD,67,89,17,8
+    LTEXT           "日期",IDC_STA_DATE,94,89,17,8
+    LTEXT           "投注额",IDC_STA_DEVOTE,121,89,25,8
+    LTEXT           "分隔符:",IDC_STATIC,213,71,29,8
+    LTEXT           "操    作",IDC_STATIC,6,117,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,42,121,
+                    348,1
+    LTEXT           "转换后的数据文件名称:",IDC_STATIC,42,30,85,8
+    LTEXT           "省份:",IDC_STATIC,247,29,21,8
+END
+
+IDD_DLG_SYSINFO DIALOG DISCARDABLE  0, 0, 280, 101
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "系统信息配置"
+FONT 9, "宋体"
+BEGIN
+    CONTROL         "自动加载数据文件",IDC_CK_AUTOLOAD,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,41,17,80,10
+    COMBOBOX        IDC_CB_FILELIST,74,31,195,198,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_CB_PROVINCE,74,58,55,198,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "确定",IDOK,156,83,50,14
+    PUSHBUTTON      "取消",IDCANCEL,223,83,50,14
+    LTEXT           "程序启动",IDC_STATIC,5,6,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,41,9,231,
+                    1
+    LTEXT           "名称:",IDC_STATIC,52,34,21,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,8,77,265,
+                    1
+    LTEXT           "缺省区域",IDC_STATIC,5,49,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,41,53,
+                    231,1
+    LTEXT           "区域:",IDC_STATIC,52,61,21,8
+END
+
+IDD_DLG_OPENFILE DIALOG DISCARDABLE  0, 0, 323, 191
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "打开历史数据文件"
+FONT 9, "宋体"
+BEGIN
+    COMBOBOX        IDC_CB_PROVINCE,30,5,54,209,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List2",IDC_LST_PROVINCE,"SysListView32",LVS_REPORT | 
+                    LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | 
+                    WS_BORDER | WS_TABSTOP,7,21,310,146
+    PUSHBUTTON      "删除",IDC_BTN_DELFILE,7,172,50,14
+    DEFPUSHBUTTON   "确定",IDOK,205,172,50,14
+    PUSHBUTTON      "取消",IDCANCEL,267,172,50,14
+    LTEXT           "省份:",IDC_STATIC,8,7,21,8
+END
+
+IDD_DLG_REGISTER DIALOGEX 0, 0, 377, 233
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "使用信息"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,13,213,50,14
+    PUSHBUTTON      "<< 注册信息",IDC_BTN_MOREINFO,132,213,50,14
+    GROUPBOX        " 注册信息 ",IDC_STA_MORE,193,7,179,218
+    LTEXT           "欢迎使用蓝精灵彩票选号软件！",IDC_STATIC,46,15,113,8
+    ICON            IDR_MAINFRAME,IDC_STATIC,6,7,20,20
+    LTEXT           "",IDC_STA_NORMAL,8,33,178,176,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STA_MOREINFO,197,19,172,200,0,WS_EX_STATICEDGE
+END
+
+IDD_DLG_DOWNLOAD DIALOGEX 0, 0, 323, 213
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "打开历史数据文件"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_CB_PROVINCE,263,5,54,209,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    CONTROL         "List2",IDC_LST_PROVINCE,"SysListView32",LVS_REPORT | 
+                    LVS_SHOWSELALWAYS | LVS_NOSORTHEADER | WS_BORDER | 
+                    WS_TABSTOP,7,23,310,146
+    PUSHBUTTON      "开始下载",IDC_BTN_DOWN,7,193,50,14
+    PUSHBUTTON      "退出",IDOK,267,193,50,14
+    LTEXT           "省份:",IDC_STATIC,238,7,21,8
+    CONTROL         "Animate1",IDC_ANI_DOWNLOAD,"SysAnimate32",
+                    ACS_TRANSPARENT | WS_TABSTOP,147,2,20,20,
+                    WS_EX_STATICEDGE
+    PUSHBUTTON      "取得文件列表",IDC_BTN_GETFILELIST,7,4,63,14
+    CONTROL         "Progress1",IDC_PRO_DOWNSTATE,"msctls_progress32",
+                    WS_BORDER,64,193,80,14
+    LTEXT           "总共需要下载文件数:",IDC_STATIC,8,177,77,8
+    LTEXT           "已经下载文件数:",IDC_STATIC,209,177,61,8
+    LTEXT           "",IDC_STA_TOTALNUM,87,175,40,11,0,WS_EX_STATICEDGE
+    LTEXT           "",IDC_STA_HAVEDOWNNUM,277,175,40,11,0,WS_EX_STATICEDGE
+    CTEXT           "http://dfliu.go.nease.net",IDC_STA_HOMEPAGE,150,193,107,
+                    13,SS_NOTIFY | SS_CENTERIMAGE
+END
+
+IDD_DLG_RGNEDIT DIALOGEX 0, 0, 270, 269
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "同区域模板管理"
+FONT 9, "宋体"
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,150,248,50,14
+    PUSHBUTTON      "取消",IDCANCEL,209,248,50,14
+    LTEXT           "管理",IDC_STATIC,8,6,17,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,35,9,225,
+                    1
+    LTEXT           "列表:",IDC_STATIC,9,19,21,8
+    LISTBOX         IDC_LST_TMPLIST,10,29,94,128,LBS_NOINTEGRALHEIGHT | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "编辑:",IDC_STATIC,118,19,21,8
+    EDITTEXT        IDC_EDT_TMPNAME,59,174,53,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "添加",IDC_BTN_TMPADD,141,176,50,14
+    PUSHBUTTON      "删除",IDC_BTN_TMPDEL,205,176,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,16,238,
+                    246,1
+    CTEXT           "模板显示区域",IDC_STA_TMPEDIT,114,29,145,128,SS_NOTIFY,
+                    WS_EX_DLGMODALFRAME | WS_EX_CLIENTEDGE
+    LTEXT           "名称:",IDC_STATIC,34,175,21,8
+    LTEXT           "操作:",IDC_STATIC,8,165,21,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,35,168,
+                    225,1
+    LTEXT           "允许:",IDC_STATIC,34,205,21,8
+    CONTROL         "旋转90度",IDC_CK_90,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,59,203,48,10
+    CONTROL         "旋转180度",IDC_CK_180,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,127,203,52,10
+    CONTROL         "旋转270度",IDC_CK_270,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,199,203,52,10
+    CONTROL         "水平镜像",IDC_CK_HMIRROR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,59,223,48,10
+    CONTROL         "垂直镜像",IDC_CK_VMIRROR,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,127,223,48,10
+END
+
+IDD_DLG_DRAWRES DIALOGEX 0, 0, 234, 99
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "画图信息"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,105,78,50,14
+    PUSHBUTTON      "取消",IDCANCEL,172,78,50,14
+    LTEXT           "颜色设置",IDC_STATIC,6,5,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,42,8,183,
+                    1
+    LTEXT           "字体设置",IDC_STATIC,6,36,33,8
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,43,39,
+                    182,1
+    CONTROL         "",IDC_STATIC,"Static",SS_BLACKRECT | SS_SUNKEN,7,69,218,
+                    1
+    COMBOBOX        IDC_CB_CLRNAME,71,14,74,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "名称:",IDC_STATIC,42,16,21,8
+    CTEXT           "设置",IDC_STA_COLOR,164,14,50,14,SS_NOTIFY | 
+                    SS_CENTERIMAGE,WS_EX_DLGMODALFRAME
+    COMBOBOX        IDC_CB_FONTNAME,71,45,74,141,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_TABSTOP
+    LTEXT           "名称:",IDC_STATIC,42,47,21,8
+    CTEXT           "设置",IDC_STA_FONT,164,47,50,14,SS_NOTIFY | 
+                    SS_CENTERIMAGE,WS_EX_DLGMODALFRAME
+END
+
+
+#ifndef _MAC
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "Comments", "\0"
+            VALUE "CompanyName", "\0"
+            VALUE "FileDescription", "MyLT Microsoft 基础类应用程序\0"
+            VALUE "FileVersion", "1, 0, 0, 1\0"
+            VALUE "InternalName", "MyLT\0"
+            VALUE "LegalCopyright", "版权所有 (C) 2003\0"
+            VALUE "LegalTrademarks", "\0"
+            VALUE "OriginalFilename", "MyLT.EXE\0"
+            VALUE "PrivateBuild", "\0"
+            VALUE "ProductName", "MyLT 应用程序\0"
+            VALUE "ProductVersion", "1, 0, 0, 1\0"
+            VALUE "SpecialBuild", "\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+#endif    // !_MAC
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_DLG_STATVIEW DLGINIT
+BEGIN
+    IDC_A_CB_STATFROM, 0x403, 1, 0
+"\000" 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// AVI
+//
+
+IDR_AVI_DOWNLOAD        AVI     DISCARDABLE     "res\\Download.avi"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BMP_TRANS           BITMAP  DISCARDABLE     "res\\trans.bmp"
+IDB_BMP_DOWN            BITMAP  DISCARDABLE     "res\\down.bmp"
+IDB_BMP_HELP            BITMAP  DISCARDABLE     "res\\help.bmp"
+IDB_BMP_MAIN            BITMAP  DISCARDABLE     "res\\main.bmp"
+IDB_BMP_NEW             BITMAP  DISCARDABLE     "res\\new.bmp"
+IDB_BMP_OPEN            BITMAP  DISCARDABLE     "res\\open.bmp"
+IDB_BMP_OPTIONS         BITMAP  DISCARDABLE     "res\\options.bmp"
+IDB_BMP_SAVE            BITMAP  DISCARDABLE     "res\\save.bmp"
+IDB_BMP_STAT            BITMAP  DISCARDABLE     "res\\stat.bmp"
+IDB_BMP_ANALYSE         BITMAP  DISCARDABLE     "res\\analyse.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "蓝精灵\n\nMyLT\n\n\nMyLT.Document\nMyLT Document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_FILE_NEW            "新建历史数据文件\n新建"
+    IDM_FILE_OPEN           "打开历史数据文件\n打开"
+    IDM_FILE_SAVE           "保存历史数据\n保存"
+    IDM_FILE_EXIT           "退出本程序\n退出"
+    IDM_DATA_MANAGER        "历史数据维护\n数据管理"
+    IDM_DATA_SELECT         "选择统计区间\n统计区间"
+    IDM_DATA_TRANSDATA      "从文本文件中转换数据\n转换"
+    IDM_OPT_SYSSETUP        "系统选项设置\n设置"
+    IDM_NET_DOWNLOAD        "从网上下载历史数据\n下载"
+    IDM_NET_UPDATE          "到网上查看最新软件\n软件更新"
+    IDM_NET_REGISTER        "到中国软件注册中心注册软件\n软件注册"
+    IDM_HLP_ABOUT           "关于蓝精灵乐透软件\n关于"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDM_VIEW_MAIN           "历史号码显示主视图\n主视图"
+    IDM_VIEW_ANALYSE        "各种图表分析视图\n分析"
+    IDM_VIEW_STAT           "缩号缩水统计计算\n统计"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_INDICATOR_PROCESS   "这是进度条区域"
+    IDS_INDICATOR_TOTALNUM  "总期数"
+    IDS_INDICATOR_MSG       "欢迎使用蓝精灵乐透型彩票选号软件!"
+    IDS_INDICATOR_TIME      "12月20日 上午10:38"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\MyLT.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#include "l.chs\afxprint.rc"        // printing/print preview resources
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
